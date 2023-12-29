@@ -1,22 +1,15 @@
 import pytest as pytest
-
 import Bubble_sort
-
 
 class TestBubbleSort:
 
 # Параметризованный тест для различных входных данных
     @pytest.mark.parametrize("input_data, expected_result", [
         ([],[]),
-
         ([5], [5]),
-
         ([4, 3, 2, 6, 12], [2, 3, 4, 6, 12]),
-
         ([1, 2, 3, 4, 5], [1, 2, 3, 4, 5]),
-
         ([5, 4, 3, 2, 1], [1, 2, 3, 4, 5])
-
     ])
 
     def test_bubble_sort(self, input_data, expected_result):
